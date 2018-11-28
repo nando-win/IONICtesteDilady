@@ -12,32 +12,32 @@
 
     <ion-item>
       <ion-label color="primary" floating>Nome do Cliente</ion-label>
-      <ion-input ></ion-input>
+      <ion-input name="cliente"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="primary" floating>Date</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate" name="dataPedido"></ion-datetime>
     </ion-item>
     
     <ion-item>
       <ion-label>A vista</ion-label>
-      <ion-radio value="1"></ion-radio>
+      <ion-radio value="1" name="pagamento"></ion-radio>
     </ion-item>
     
     <ion-item>
       <ion-label color="primary" floating>Código do Produto</ion-label>
-      <ion-input type="number"></ion-input>
+      <ion-input type="number" name="codProduto"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="primary" floating>Descrição do Produto</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" name="descricao"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label color="primary" floating>Quantidade</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-input type="number" name="quantidade"></ion-input>
       </ion-item>
 
       <br>
@@ -55,6 +55,6 @@
 
 <ion-footer>
   
-  <button ion-button>Enviar Pedido</button>
+  <button ion-button (click)="criarVenda()">Enviar Pedido</button>
 
 </ion-footer>

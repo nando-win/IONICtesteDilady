@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
@@ -12,11 +12,11 @@ import 'rxjs/add/operator/map';
 export class VendasProvider {
   private API_URL = 'http://localhost:52527/api/vendas/'
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: Http) {}
 
     // console.log('Hello VendasProvider Provider');
 
-    post(cliente: string, dataPedido: string, pagamento: number, codProduto: number, descricao: string, quantidade: number) {
+    criarVenda(cliente: string, dataPedido: string, pagamento: number, codProduto: number, descricao: string, quantidade: number) {
       return new Promise((resolve, reject) => {
         
        // let url = this.API_URL + 'Get()';
@@ -34,9 +34,8 @@ export class VendasProvider {
             resolve(result.json())
           },
           (error) => {
-            reject(error.json())
-          }
-          )
+            reject(error.json());
+          } )
       });
     }
   }

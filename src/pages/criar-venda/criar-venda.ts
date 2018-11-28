@@ -28,6 +28,16 @@ export class CriarVendaPage {
     this.model.quantidade = 123;
   }
 
+  criarVenda() {
+    this.userProvider.criarVenda(this.model.cliente, this.model.dataPedido, this.model.pagamento, this.model.codProduto, this.model.descricao, this.model.quantidade)
+    .then((result: any) => {
+      this.toast.create({ message: 'Venda registrada com sucesso', position: 'botton', duration: 3000})
+    })
+    .catch((error: any) => {
+      this.toast.create({ message: 'Erro ao criar venda.' + error.error, position: 'botton', duration: 3000})
+    })
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad CriarVendaPage');
   }

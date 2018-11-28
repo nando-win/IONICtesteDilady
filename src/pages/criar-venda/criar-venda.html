@@ -1,18 +1,60 @@
-<!--
-  Generated template for the CriarVendaPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>criar-venda</ion-title>
+    <ion-title>
+      Vendas Dilady
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding>
 
+  <ion-list>
+
+    <ion-item>
+      <ion-label color="primary" floating>Nome do Cliente</ion-label>
+      <ion-input type="text" name="cliente" [(ngModel)]="model.cliente"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Date</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="model.dataPedido" name="dataPedido"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>A vista</ion-label>
+      <ion-radio value="1" name="pagamento" [(ngModel)]="model.pagamento"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" floating>Código do Produto</ion-label>
+      <ion-input type="number" name="codProduto" [(ngModel)]="model.codProduto"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Descrição do Produto</ion-label>
+      <ion-input type="text" name="descricao" [(ngModel)]="model.descricao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" floating>Quantidade</ion-label>
+        <ion-input type="number" name="quantidade" [(ngModel)]="model.quantidade"></ion-input>
+      </ion-item>
+
+      <br>
+        
+      <ion-buttons></ion-buttons>
+
+      <br>
+  <!-- <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p> -->
+
+</ion-list>
+
 </ion-content>
+
+<ion-footer>
+  
+  <button ion-button (click)="criarVenda()">Enviar Pedido</button>
+
+</ion-footer>

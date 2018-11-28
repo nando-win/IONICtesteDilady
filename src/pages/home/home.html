@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Vendas Dilady
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label color="primary" floating>Nome do Cliente</ion-label>
+      <ion-input ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Date</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>A vista</ion-label>
+      <ion-radio value="1"></ion-radio>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" floating>Código do Produto</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" floating>Descrição do Produto</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" floating>Quantidade</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+
+      <br>
+        
+      <ion-buttons></ion-buttons>
+
+      <br>
+  <!-- <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p> -->
+
+</ion-list>
+
+</ion-content>
+
+<ion-footer>
+  
+  <button ion-button>Enviar Pedido</button>
+
+</ion-footer>
